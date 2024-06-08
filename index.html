@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Asistencias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Asistencia</h2>
+        <form>
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" required>
+            <label for="fecha">Fecha de Asistencia:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            <input type="submit" value="Confirmar asistencia">
+        </form>
+    </div>
+
+    <script>
+        // Obtener la fecha actual en formato YYYY-MM-DD
+        var today = new Date().toISOString().split('T')[0];
+        // Establecer la fecha actual como el valor del campo de fecha
+        document.getElementById("fecha").value = today;
+    </script>
+</body>
+</html>
